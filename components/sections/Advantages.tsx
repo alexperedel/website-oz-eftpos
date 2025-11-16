@@ -13,28 +13,28 @@ interface AdvantageCardProps {
 function AdvantageCard({ icon, title, description, highlight = false }: AdvantageCardProps) {
   return (
     <div
-      className={`relative p-6 rounded-2xl transition-all duration-300 hover:scale-105 ${
+      className={`relative p-5 rounded-xl transition-all duration-300 hover:scale-105 ${
         highlight
           ? 'bg-gradient-to-br from-[#0066FF] to-[#0052CC] text-white shadow-xl'
           : 'bg-white border border-gray-200 hover:shadow-xl hover:border-[#0066FF]/30'
       }`}
     >
       <div
-        className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 ${
+        className={`w-12 h-12 rounded-lg flex items-center justify-center mb-3 ${
           highlight ? 'bg-white/20' : 'bg-[#0066FF]/10'
         }`}
       >
         <div className={highlight ? 'text-white' : 'text-[#0066FF]'}>{icon}</div>
       </div>
       <h3
-        className={`text-xl font-bold mb-3 ${
+        className={`text-lg font-bold mb-2 ${
           highlight ? 'text-white' : 'text-gray-900'
         }`}
       >
         {title}
       </h3>
       <p
-        className={`leading-relaxed ${
+        className={`text-sm leading-relaxed ${
           highlight ? 'text-white/90' : 'text-gray-600'
         }`}
       >
@@ -46,29 +46,29 @@ function AdvantageCard({ icon, title, description, highlight = false }: Advantag
 
 export default function Advantages() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0066FF]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0066FF]/5 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="inline-block px-4 py-2 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-sm font-semibold mb-4">
+        <div className="text-center mb-10 max-w-3xl mx-auto">
+          <span className="inline-block px-3 py-1.5 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-xs font-semibold mb-3">
             WHY CHOOSE US
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Payment solutions designed for your success
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             We deliver more than just payment processing. Get the technology, support, and cost savings that help your business thrive.
           </p>
         </div>
 
         {/* Main Feature with Image */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
           <div className="order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-xl overflow-hidden shadow-xl">
               <Image
                 src="/images/nuvei_till-terminals_nu01.webp"
                 alt="Modern EFTPOS Terminal"
@@ -78,45 +78,39 @@ export default function Advantages() {
               />
             </div>
           </div>
-          <div className="order-1 lg:order-2 space-y-6">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <div className="order-1 lg:order-2 space-y-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
               Zero-cost upgrades with cutting-edge technology
             </h3>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base text-gray-600 leading-relaxed">
               Access the latest payment technology without upfront costs. We provide premium EFTPOS terminals and integrate them with your existing systems at no charge.
             </p>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
+                <svg className="w-5 h-5 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
                 <div>
-                  <p className="font-semibold text-gray-900">Latest PAX touchscreen terminals</p>
-                  <p className="text-gray-600">Standalone or integrated with your POS system</p>
+                  <p className="font-semibold text-gray-900 text-sm">Latest PAX touchscreen terminals</p>
+                  <p className="text-gray-600 text-sm">Standalone or integrated with your POS system</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
+                <svg className="w-5 h-5 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
                 <div>
-                  <p className="font-semibold text-gray-900">Free POS integration</p>
-                  <p className="text-gray-600">We handle the complete integration at zero cost</p>
+                  <p className="font-semibold text-gray-900 text-sm">Free POS integration</p>
+                  <p className="text-gray-600 text-sm">We handle the complete integration at zero cost</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
+                <svg className="w-5 h-5 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
                 <div>
-                  <p className="font-semibold text-gray-900">All payment methods supported</p>
-                  <p className="text-gray-600">Contactless, chip, swipe, and digital wallets</p>
+                  <p className="font-semibold text-gray-900 text-sm">All payment methods supported</p>
+                  <p className="text-gray-600 text-sm">Contactless, chip, swipe, and digital wallets</p>
                 </div>
               </div>
             </div>
@@ -124,7 +118,7 @@ export default function Advantages() {
         </div>
 
         {/* Advantages Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           <AdvantageCard
             icon={
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
@@ -186,44 +180,44 @@ export default function Advantages() {
         </div>
 
         {/* Solution Types Section */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
               One ecosystem, every payment channel
             </h3>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
               Whether you need in-store terminals, online payments, or portable solutions, we&apos;ve got you covered with best-in-class technology.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5">
             {/* Standalone Solutions */}
-            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#0066FF]/10 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
+            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all">
+              <div className="w-10 h-10 rounded-lg bg-[#0066FF]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Standalone terminals</h4>
-              <p className="text-gray-600 mb-4">
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Standalone terminals</h4>
+              <p className="text-sm text-gray-600 mb-3">
                 Perfect for businesses without a POS system. Accept all payment types with our modern touchscreen terminals. Fast setup, easy to use.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>No POS system required</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Portable options available</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Ideal for retail & hospitality</span>
                 </li>
@@ -231,33 +225,33 @@ export default function Advantages() {
             </div>
 
             {/* Integrated Solutions */}
-            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#0066FF]/10 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
+            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all">
+              <div className="w-10 h-10 rounded-lg bg-[#0066FF]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M13 7H7v6h6V7z" />
                   <path fillRule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Integrated solutions</h4>
-              <p className="text-gray-600 mb-4">
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Integrated solutions</h4>
+              <p className="text-sm text-gray-600 mb-3">
                 Seamlessly connect with your existing POS system. We integrate with 450+ systems and handle the entire process at no cost to you.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Free integration with your POS</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Automatic transaction processing</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Streamlined operations</span>
                 </li>
@@ -265,32 +259,32 @@ export default function Advantages() {
             </div>
 
             {/* Payment Gateway */}
-            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#0066FF]/10 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
+            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all">
+              <div className="w-10 h-10 rounded-lg bg-[#0066FF]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Payment gateway</h4>
-              <p className="text-gray-600 mb-4">
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Payment gateway</h4>
+              <p className="text-sm text-gray-600 mb-3">
                 Accept online payments securely through your website or e-commerce platform. Perfect for growing your digital presence.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Secure online transactions</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>E-commerce integration</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Shopping cart compatibility</span>
                 </li>
@@ -298,32 +292,32 @@ export default function Advantages() {
             </div>
 
             {/* Pay by Link */}
-            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#0066FF]/10 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
+            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all">
+              <div className="w-10 h-10 rounded-lg bg-[#0066FF]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#0066FF]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Pay by link</h4>
-              <p className="text-gray-600 mb-4">
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Pay by link</h4>
+              <p className="text-sm text-gray-600 mb-3">
                 Send secure payment links via email or SMS directly from your merchant portal. Get paid faster with minimal effort.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Create links in seconds</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Perfect for invoicing</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <svg className="w-4 h-4 text-[#0066FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>No physical terminal needed</span>
                 </li>
@@ -333,28 +327,28 @@ export default function Advantages() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        <div className="mt-10 text-center">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
             Ready to transform your payment experience?
           </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 mb-6 max-w-2xl mx-auto">
             Join over 150 Perth businesses saving thousands on processing fees while delivering exceptional payment experiences.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center bg-[#0066FF] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#0052CC] transition-all duration-200 hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center justify-center bg-[#0066FF] text-white px-6 py-3 rounded-lg font-semibold text-base hover:bg-[#0052CC] transition-all duration-200 hover:shadow-xl hover:scale-105"
             >
               Get started today
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
             <Link
               href="tel:1800000000"
-              className="inline-flex items-center justify-center bg-white text-[#0066FF] border-2 border-[#0066FF] px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#0066FF] hover:text-white transition-all duration-200"
+              className="inline-flex items-center justify-center bg-white text-[#0066FF] border-2 border-[#0066FF] px-6 py-3 rounded-lg font-semibold text-base hover:bg-[#0066FF] hover:text-white transition-all duration-200"
             >
-              <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
               Call us now
