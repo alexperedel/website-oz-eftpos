@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/website-oz-eftpos' : '',
+  basePath: '/website-oz-eftpos',
+  assetPrefix: '/website-oz-eftpos/',
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
