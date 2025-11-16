@@ -11,13 +11,13 @@ interface FeatureProps {
 
 function Feature({ icon, title, description }: FeatureProps) {
   return (
-    <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#0066FF]/10 flex items-center justify-center text-[#0066FF]">
+    <div className="flex items-start gap-3">
+      <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#0066FF]/10 flex items-center justify-center text-[#0066FF]">
         {icon}
       </div>
       <div>
-        <h3 className="font-semibold text-lg mb-2">{title}</h3>
-        <p className="text-gray-600 leading-relaxed">{description}</p>
+        <h3 className="font-semibold text-base mb-1">{title}</h3>
+        <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
       </div>
     </div>
   );
@@ -25,46 +25,46 @@ function Feature({ icon, title, description }: FeatureProps) {
 
 export default function Solutions() {
   return (
-    <section className="py-20 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 md:py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             One solution for all your business payments
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             From in-person to online payments, connect everything on one platform
           </p>
         </div>
 
         {/* Solutions Grid */}
-        <div className="space-y-32">
+        <div className="space-y-16 md:space-y-24">
           {/* Solution 1: EFTPOS Terminals */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto lg:max-w-none">
                 <Image
-                  src="/images/paxa920_payment-approved.png"
+                  src="/images/paxa920_restuarant.PNG"
                   alt="EFTPOS Terminal"
-                  width={600}
-                  height={600}
-                  className="w-full h-auto"
+                  width={450}
+                  height={450}
+                  className="w-full h-auto rounded-2xl"
                 />
               </div>
             </div>
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-1 lg:order-2 space-y-5">
               <div>
-                <span className="inline-block px-4 py-2 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block px-3 py-1.5 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-xs font-semibold mb-3">
                   EFTPOS SOLUTIONS
                 </span>
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                   Modern payment terminals built for your business
                 </h3>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-base text-gray-600 mb-5">
                   Accept all payment types with fast, secure terminals that integrate seamlessly with your POS system. Get set up in minutes and start accepting payments today.
                 </p>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <Feature
                   icon={
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -96,10 +96,10 @@ export default function Solutions() {
               </div>
               <Link
                 href="#contact"
-                className="inline-flex items-center text-[#0066FF] font-semibold hover:gap-3 gap-2 transition-all"
+                className="inline-flex items-center text-[#0066FF] font-semibold text-sm hover:gap-3 gap-2 transition-all"
               >
                 Learn more about terminals
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
@@ -107,20 +107,20 @@ export default function Solutions() {
           </div>
 
           {/* Solution 2: Online Payments */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-5">
               <div>
-                <span className="inline-block px-4 py-2 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block px-3 py-1.5 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-xs font-semibold mb-3">
                   ONLINE PAYMENTS
                 </span>
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                   Accept payments anywhere, anytime
                 </h3>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-base text-gray-600 mb-5">
                   Expand beyond the counter with secure online payment solutions. Perfect for e-commerce, invoicing, and remote transactions.
                 </p>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <Feature
                   icon={
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -152,53 +152,53 @@ export default function Solutions() {
               </div>
               <Link
                 href="#contact"
-                className="inline-flex items-center text-[#0066FF] font-semibold hover:gap-3 gap-2 transition-all"
+                className="inline-flex items-center text-[#0066FF] font-semibold text-sm hover:gap-3 gap-2 transition-all"
               >
                 Explore online solutions
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
             </div>
             <div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-white p-8">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto lg:max-w-none">
                 <Image
                   src="/images/online-payments.png"
                   alt="Online Payments"
-                  width={600}
-                  height={600}
-                  className="w-full h-auto"
+                  width={450}
+                  height={450}
+                  className="w-full h-auto rounded-2xl"
                 />
               </div>
             </div>
           </div>
 
           {/* Solution 3: Business Dashboard */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto lg:max-w-none">
                 <Image
                   src="/images/homepage-dashboard-mockup-desktop-new.webp"
                   alt="Business Dashboard"
-                  width={600}
-                  height={600}
+                  width={450}
+                  height={450}
                   className="w-full h-auto"
                 />
               </div>
             </div>
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-1 lg:order-2 space-y-5">
               <div>
-                <span className="inline-block px-4 py-2 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block px-3 py-1.5 bg-[#0066FF]/10 text-[#0066FF] rounded-full text-xs font-semibold mb-3">
                   MANAGEMENT TOOLS
                 </span>
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                   Stay on top of every transaction
                 </h3>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-base text-gray-600 mb-5">
                   Monitor your sales in real-time with powerful reporting and analytics. Make data-driven decisions to grow your business.
                 </p>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <Feature
                   icon={
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -231,10 +231,10 @@ export default function Solutions() {
               </div>
               <Link
                 href="#contact"
-                className="inline-flex items-center text-[#0066FF] font-semibold hover:gap-3 gap-2 transition-all"
+                className="inline-flex items-center text-[#0066FF] font-semibold text-sm hover:gap-3 gap-2 transition-all"
               >
                 Discover management tools
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
