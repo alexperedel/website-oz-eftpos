@@ -42,7 +42,7 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="bg-gradient-to-br from-[#0066FF]/5 to-[#0066FF]/10 rounded-xl p-5 border border-[#0066FF]/10">
-                <div className="text-3xl font-bold text-[#0066FF] mb-1">150+</div>
+                <div className="text-3xl font-bold text-[#0066FF] mb-1">300+</div>
                 <div className="text-sm text-gray-700 font-medium">Perth businesses trust us</div>
               </div>
               <div className="bg-gradient-to-br from-[#0066FF]/5 to-[#0066FF]/10 rounded-xl p-5 border border-[#0066FF]/10">
@@ -55,8 +55,8 @@ export default function About() {
                 <div className="text-sm text-gray-700 font-medium">Google rating</div>
               </div>
               <div className="bg-gradient-to-br from-[#0066FF]/5 to-[#0066FF]/10 rounded-xl p-5 border border-[#0066FF]/10">
-                <div className="text-3xl font-bold text-[#0066FF] mb-1">95%</div>
-                <div className="text-sm text-gray-700 font-medium">Pay zero processing fees</div>
+                <div className="text-3xl font-bold text-[#0066FF] mb-1">$0</div>
+                <div className="text-sm text-gray-700 font-medium">Processing fees on surcharge</div>
               </div>
               <div className="bg-gradient-to-br from-[#0066FF]/5 to-[#0066FF]/10 rounded-xl p-5 border border-[#0066FF]/10">
                 <div className="text-3xl font-bold text-[#0066FF] mb-1">$0</div>

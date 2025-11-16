@@ -147,7 +147,7 @@ export default function Footer() {
               <p className="text-xs text-gray-400">Pay Zero Fees</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-[#0066FF] mb-1">150+</p>
+              <p className="text-2xl font-bold text-[#0066FF] mb-1">300+</p>
               <p className="text-xs text-gray-400">Perth Businesses</p>
             </div>
             <div className="text-center">

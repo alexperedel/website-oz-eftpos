@@ -2,56 +2,80 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNavClick = (href: string) => {
+    setMobileMenuOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  };
 
   const navItems = [
     { label: 'Solutions', href: '#solutions' },
     { label: 'About', href: '#about' },
-    { label: 'Support', href: '#support' },
     { label: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-white/95 backdrop-blur-md'
+      } border-b border-gray-200`}>
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Image
               src="/images/OZ eftpos logo-03.png"
               alt="Oz Eftpos"
               width={160}
               height={50}
-              className="h-10 w-auto"
+              className="h-8 sm:h-10 w-auto"
               priority
+              loading="eager"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.label}
-                href={item.href}
-                className="text-gray-700 hover:text-[#0066FF] font-medium transition-colors duration-200"
+                onClick={() => handleNavClick(item.href)}
+                className="text-gray-700 hover:text-[#0066FF] font-medium transition-colors duration-200 relative group"
               >
                 {item.label}
-              </Link>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0066FF] transition-all duration-200 group-hover:w-full"></span>
+              </button>
             ))}
-            <Link
-              href="#contact"
-              className="bg-[#0066FF] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#0052CC] transition-all duration-200 hover:shadow-lg"
+            <button
+              onClick={() => handleNavClick('#contact')}
+              className="bg-gradient-to-r from-[#0066FF] to-[#0052CC] text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-xl transition-all duration-200 transform hover:scale-105"
             >
               Get Started
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-700 hover:text-[#0066FF]"
+            className="md:hidden p-2 -mr-2 text-gray-700 hover:text-[#0066FF] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -82,29 +106,30 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden border-t border-gray-100">
+            <div className="py-3 space-y-1">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="text-gray-700 hover:text-[#0066FF] font-medium px-2 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="block w-full text-left px-6 py-3 text-base text-gray-700 hover:bg-gray-50 hover:text-[#0066FF] transition-colors"
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
-              <Link
-                href="#contact"
-                className="bg-[#0066FF] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#0052CC] transition-colors text-center"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get Started
-              </Link>
+              <div className="px-6 pt-2 pb-3">
+                <button
+                  onClick={() => handleNavClick('#contact')}
+                  className="w-full bg-[#0066FF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0052CC] transition-colors"
+                >
+                  Get Started
+                </button>
+              </div>
             </div>
           </div>
         )}
       </nav>
     </header>
+    </>
   );
 }

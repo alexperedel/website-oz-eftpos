@@ -25,11 +25,11 @@ function Feature({ icon, title, description }: FeatureProps) {
 
 export default function Solutions() {
   return (
-    <section className="relative -mt-12 md:mt-0 pt-8 pb-8 md:py-20 bg-transparent md:bg-white">
+    <section id="solutions" className="relative -mt-12 md:mt-0 pt-8 pb-8 md:py-20 bg-transparent md:bg-white">
       {/* White background with rounded top corners - mobile only */}
       <div className="absolute inset-0 bg-white rounded-t-3xl md:rounded-none"></div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header - Hidden on mobile, shown on desktop */}
         <div className="hidden md:block text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">

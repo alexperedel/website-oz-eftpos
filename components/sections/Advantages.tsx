@@ -46,7 +46,7 @@ function AdvantageCard({ icon, title, description, highlight = false }: Advantag
 
 export default function Advantages() {
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="advantages" className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0066FF]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0066FF]/5 rounded-full blur-3xl"></div>
@@ -146,7 +146,7 @@ export default function Advantages() {
               </svg>
             }
             title="Perth-based support"
-            description="Local expertise you can count on. Over 150 Perth businesses trust us, reflected in our 5-star Google rating."
+            description="Local expertise you can count on. Over 300 Perth businesses trust us, reflected in our 5-star Google rating."
             highlight={true}
           />
           <AdvantageCard
@@ -332,7 +332,7 @@ export default function Advantages() {
             Ready to transform your payment experience?
           </h3>
           <p className="text-base text-gray-600 mb-6 max-w-2xl mx-auto">
-            Join over 150 Perth businesses saving thousands on processing fees while delivering exceptional payment experiences.
+            Join over 300 Perth businesses saving thousands on processing fees while delivering exceptional payment experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
