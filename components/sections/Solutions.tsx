@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/lib/utils';
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -47,7 +48,7 @@ export default function Solutions() {
             <div className="order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto lg:max-w-none">
                 <Image
-                  src="/images/paxa920_restuarant.PNG"
+                  src={getImagePath('/images/paxa920_restuarant.PNG')}
                   alt="EFTPOS Terminal"
                   width={450}
                   height={450}
@@ -166,7 +167,7 @@ export default function Solutions() {
             <div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto lg:max-w-none">
                 <Image
-                  src="/images/online-payments.png"
+                  src={getImagePath('/images/online-payments.png')}
                   alt="Online Payments"
                   width={450}
                   height={450}
@@ -179,9 +180,9 @@ export default function Solutions() {
           {/* Solution 3: Business Dashboard */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto lg:max-w-none">
-                <Image
-                  src="/images/homepage-dashboard-mockup-desktop-new.webp"
+            <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto lg:max-w-none">
+              <Image
+                src={getImagePath('/images/homepage-dashboard-mockup-desktop-new.webp')}
                   alt="Business Dashboard"
                   width={450}
                   height={450}

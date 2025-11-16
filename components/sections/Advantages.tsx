@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/lib/utils';
 
 interface AdvantageCardProps {
   icon: React.ReactNode;
@@ -70,7 +71,7 @@ export default function Advantages() {
           <div className="order-2 lg:order-1">
             <div className="relative rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/images/nuvei_till-terminals_nu01.webp"
+                src={getImagePath('/images/nuvei_till-terminals_nu01.webp')}
                 alt="Modern EFTPOS Terminal"
                 width={600}
                 height={450}

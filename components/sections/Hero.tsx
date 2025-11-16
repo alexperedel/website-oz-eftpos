@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { getImagePath } from '@/lib/utils';
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -45,7 +46,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/Nuvei_POS.jpg"
+          src={getImagePath('/images/Nuvei_POS.jpg')}
           alt="Payment Solution"
           fill
           className="object-cover"

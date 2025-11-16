@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { getImagePath } from '@/lib/utils';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -43,7 +44,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Image
-              src="/images/OZ eftpos logo-03.png"
+              src={getImagePath('/images/OZ eftpos logo-03.png')}
               alt="Oz Eftpos"
               width={160}
               height={50}
